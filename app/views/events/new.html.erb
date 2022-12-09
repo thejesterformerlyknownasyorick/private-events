@@ -1,0 +1,11 @@
+<%= form_with model: @event do |form| %>
+    <div>
+        <%= form.label :title, "What do you want to happen?" %>
+        <%= form.text_field :title %><br><br>
+        <%= form.label :location, "Where do you want it to happen?" %>
+        <%= form.text_field :location %><br><br>
+        <%= form.label :date, "When do you want it to happen?" %>
+        <%= form.date_select(:date, :start_year => Date.current.year) %><br><br>
+        <%= form.submit "Make it happen!" %>
+    </div>
+<% end %>

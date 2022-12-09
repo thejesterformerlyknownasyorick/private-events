@@ -1,0 +1,21 @@
+<h1>Events:</h1>
+
+<p>Upcoming Events:</p>
+<ul>
+    <% @events.each do |event| %>
+        <% if event.date >= Date.today%>
+            <li><%= link_to event.title, event %></li>
+        <% else %>
+        <% end %>
+    <% end %>
+</ul>
+
+<p>Past Events:</p>
+<ul>
+    <% @events.each do |event| %>
+        <% if event.date < Date.today%>
+            <li><%= link_to event.title, event %></li>
+        <% else %>
+        <% end %>
+    <% end %>
+</ul>
